@@ -1,0 +1,38 @@
+<div class="container">
+    <h2>Fréquence de passage <small>Horaire</small></h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-3">Horaires de passage</div>
+        <div class="col col-3">Du Lundi au Vendredi</div>
+        <div class="col col-3">Samedi</div>
+        <div class="col col-3">Dimanche</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-3" data-label="Job Id">6H a 7H</div>
+        <div class="col col-3" data-label="Customer Name"><input type="text" id="input" [(ngModel)]="horaire.h1"> min</div>
+        <div class="col col-3" data-label="Amount"><input type="text" id="input" [(ngModel)]="horaire.h2"> min</div>
+        <div class="col col-3" data-label="Payment Status"><input type="text" id="input" [(ngModel)]="horaire.h3"> min</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-3" data-label="Job Id">7H a 10H30</div>
+        <div class="col col-3" data-label="Customer Name"><input type="text" id="input" [(ngModel)]="horaire.h4"> min</div>
+        <div class="col col-3" data-label="Amount"><input type="text" id="input" [(ngModel)]="horaire.h5"> min</div>
+        <div class="col col-3" data-label="Payment Status"><input type="text" id="input" [(ngModel)]="horaire.h6"> min</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-3" data-label="Job Id">10H30 a 20H</div>
+        <div class="col col-3" data-label="Customer Name"><input type="text" id="input" [(ngModel)]="horaire.h7"> min</div>
+        <div class="col col-3" data-label="Amount"><input type="text" id="input" [(ngModel)]="horaire.h8"> min</div>
+        <div class="col col-3" data-label="Payment Status"><input type="text" id="input" [(ngModel)]="horaire.h9"> min</div>
+      </li>
+      <li class="table-row">
+        <div class="col col-3" data-label="Job Id">20H a 22H</div>
+        <div class="col col-3" data-label="Customer Name"><input type="text" id="input" [(ngModel)]="horaire.h10"> min</div>
+        <div class="col col-3" data-label="Amount"><input type="text" id="input" [(ngModel)]="horaire.h11"> min</div>
+        <div class="col col-3" data-label="Payment Status"><input type="text" id="input" [(ngModel)]="horaire.h12"> min</div>
+      </li>
+    </ul>
+  </div>
+<div class="btn-container">
+    <button class="btn btn-primary" (click)="setContent()">Mis a jour</button>
+</div>

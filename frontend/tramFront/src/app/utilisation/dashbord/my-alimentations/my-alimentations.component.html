@@ -1,0 +1,30 @@
+<div class="mycontainer">
+    <div *ngIf="alimentations.length != 0">
+        <h3>La Liste Des Alimentations</h3>
+        <br>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                  <th>Montant</th>
+                  <th>Date</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor ="let alimentation of alimentations | paginate : config">
+                    <td>{{alimentation.montant}}</td>
+                    <td>{{alimentation.dateAlimentation}}</td>
+                    
+                </tr>
+              </tbody>
+        </table>
+        <pagination-controls id="basicPaginate" (pageChange)="pageChanged($event)"></pagination-controls>
+    </div>
+    <div *ngIf="alimentations.length == 0"  class="mycontainer">
+        <img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/v2/assets/empty.svg" >
+        <br><br>
+        <h5>No Results Found</h5>
+    </div>
+
+</div>
+

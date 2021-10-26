@@ -1,0 +1,149 @@
+/*******************NAVBAR STYLING*********************/
+nav{
+    background-color: #6d9ed6;
+    
+}
+
+nav a{
+    color:white;
+    font-size: 20px;
+}
+nav a:hover{
+    color: black;
+}
+nav i{
+    margin:0px 25px;
+    display: inline-block;
+    color : white ;
+}
+
+#sinup{
+    margin-right: 20px;
+}
+a:hover,i:hover{
+    color:rgb(212, 202, 201);
+}
+nav a img{
+    
+    display: inline-block;
+    width: 100%;
+}
+/*******************HEADER STYLING*********************/
+.header img{
+    width: 100%;
+}
+.navbar-brand{
+    margin-left: 3.5rem;
+    margin-right: 3rem;
+}
+
+/*******************Advantages*********************/
+.advantages{
+    padding:90px 0px;
+    text-align: center;
+    margin : 0px !important;
+}
+.advantages .advantage_item{
+    display: inline-block;
+    text-align: center;
+    margin:0px auto !important;
+    border : 2px #6d9ed6 solid ;
+    padding:44px !important;
+}
+.advantages .advantage_item i{
+    font-size: 65px;
+    display: inline-block;
+    width: 100%;
+    color :#6d9ed6;
+    
+}
+
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    background: rgba(157, 206, 235, 0.8);
+    transition: all 0.7s;
+    visibility:hidden;
+}
+
+.mymodal{
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    width: 50%;
+    max-width: 630px;
+    min-width: 320px;
+    height: auto;
+    z-index: 2000;
+    visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateX(-50%) translateY(-50%);
+    transition: all 0.8s;
+}
+
+/*******************Footer*********************/
+
+footer{
+    background-color: #6d9ed6 ;
+    color:white;
+    display: flex;
+    padding:40px;
+}
+
+footer .footer-right ,footer .footer-left{
+    display:inline-block;
+    width:50%;
+}
+
+.footer-left{
+    padding-left: 50px;
+}
+
+.footer-left i{
+    font-size:26px;
+    margin-right: 20px;
+}
+
+.footer-left div{
+    margin:40px 0;
+}
+
+.footer-right p{
+    width:70%;
+}
+
+.icons{
+    display:flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin-top: 66px;
+}
+
+.icons i{
+    font-size: 30px;
+}
+
+#tram{
+    font-size: 42px;
+}
+
+@media screen and (max-width: 670px) {
+    footer {
+      flex-direction: column;
+    }
+    .footer-right p{
+        width:100%;
+        
+    }
+    footer .footer-right,footer .footer-left{
+        width:100%;
+    }
+    .icons{
+        width: 100%;
+    }
+  }

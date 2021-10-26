@@ -1,0 +1,120 @@
+<div id="con">
+  <!--************************NAVBAR****************************-->
+  <div class="overlay" id="overlay"></div>
+  <nav class="navbar navbar-expand-sm ">
+      <a class="navbar-brand" href="#"> <i class="fas fa-subway" id="tram"></i></a> 
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/public/home">Accueil</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/public/home" fragment="services">Nos Services</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">A propos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" (click)="onOpenModal()">S'identifier</a>
+              </li>
+          </ul>
+          <a routerLink="/public/sign" id="sinup">
+            Inscrivez-vous
+          </a>
+      </div>
+  </nav>
+  <!--************************background Image ****************************-->
+  <div class="header" id="header">
+      <img src="../../../assets/images/bg42.jpg">
+  </div>
+  <!--************************ADVANTAGES ****************************-->
+  <div class="advantages row" id="services">
+      <div class="advantage_item col-md-2  p-3 mb-5 bg-white rounded">
+          <i class="fas fa-ticket-alt"></i>
+          <h5>E-Ticket</h5>
+          <p>vous pouvez acheter votre ticket facilement</p>
+      </div>
+      <div class="advantage_item col-md-2  p-3 mb-5 bg-white rounded">
+        <i class="far fa-clock"></i>
+        <h5>Horarire</h5>
+        <p>consulter les horaires de passage de tramway </p>
+    </div>
+    <div class="advantage_item col-md-2  p-3 mb-5 bg-white rounded">
+      <i class="fas fa-credit-card"></i>
+      <h5>TramSolde</h5>
+      <p>alimenter votre TramSolde facilement</p>
+  </div>
+
+</div>
+
+<!--************************Footer****************************-->
+
+<footer>
+  <div class="footer-left">
+    <div>
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Hay Essalam,Agadir,Maroc</span>
+    </div>
+    <div>
+      <i class="fas fa-phone-alt"></i>
+      <span>+212 658 396216</span>
+    </div>
+    <div>
+      <i class="far fa-envelope"></i>
+      <span>tram.ensaa@gmail.com</span>
+    </div>
+  </div>
+  <div  class="footer-right">
+    <h3>A Propos</h3>
+    <p>TRANSDEV est le 5ème opérateur de transport public en Europe et leader européen du transport de masse, avec une implantation dans plus de 13 pays. La candidature de TRANSDEV a été retenue à l'issue d'un appel d'offres international, en vertu d'objectifs qualitatifs et quantitatifs précis et ce, pour une période de 6 ans.</p>
+      <div class="icons">
+       <a> <i class="fab fa-facebook-f"></i></a>
+        <a><i class="fab fa-twitter"></i></a>
+        <a><i class="fab fa-snapchat"></i></a>
+        <a><i class="fab fa-instagram"></i></a>
+      </div>
+  </div>
+</footer>
+
+
+
+
+<!--************************  MODAL ****************************-->
+<div class="mymodal" id="modal" >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+          <button type="button" class="close" (click)="onCloseModal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-title text-center">
+            <h4>S'identifier</h4>
+            <div *ngIf="mode==1" class="alert alert-danger" role="alert">Nom d'utilisateur ou mot de passe invalide !</div>
+          </div>
+          <div class="d-flex flex-column text-center">
+            <form>
+              <div class="form-group">
+                <input [(ngModel)]="loginRequest.gmail" [ngModelOptions]="{standalone: true}" type="email" class="form-control" id="email1"placeholder="votre adresse email...">
+              </div>
+              <div class="form-group">
+                <input [(ngModel)]="loginRequest.password" [ngModelOptions]="{standalone: true}" type="password" class="form-control" id="password1" placeholder="votre mot de passe...">
+              </div>
+              <button (click)="login()" type="button" class="btn btn-info btn-block btn-round"  >S'identifier</button>
+            </form>
+            
+            
+        <div class="modal-footer d-flex justify-content-center">
+          <div class="signup-section">Première visite? <a routerLink="/public/sign" class="text-info"  data-dismiss="modal" > Inscrivez-vous</a>.</div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+

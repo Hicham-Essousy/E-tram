@@ -1,0 +1,103 @@
+
+<div class="flex h-full  bg-white h-screen ">
+  <div class="overlay" id="overlay"></div>
+<div class="fixed lg:fixed bottom-0 w-full lg:w-24 lg:h-full z-10">
+  <div class="w-full lg:w-24 h-full bg-gray-700  ">
+   
+       <a href="#" class=" hidden absolute top-10 left-12 transform -translate-x-1/2  lg:block p-20 rounded-xl f ">
+        <div class="flex justify-center items-center w-20 h-20  opacity-100 rounded-xl text-blue-600 transform  bg-gray-200">
+        <i class="fas fa-subway " id="tram"   ></i>
+        </div>
+      </a>
+      
+    <div class="flex lg:flex-col items-center justify-center h-full space-x-4 lg:space-x-0 lg:space-y-4 py-4 lg:pt-1">
+       
+       <a routerLink="/public/dashbord/home">
+        <div class="flex justify-center items-center w-14 h-14 text-white opacity-50 rounded-xl hover:bg-white hover:opacity-100 hover:text-blue-600 transform hover:-translate-y-8 lg:hover:translate-y-0 lg:hover:translate-x-8 duration-300  hover:shadow-xl bg-gray-500">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+           <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+         </svg>
+        </div>
+      </a>
+      <a routerLink="/public/dashbord/profile">
+        <div class="flex justify-center items-center w-14 h-14 text-white opacity-50 rounded-xl hover:bg-white hover:opacity-100 hover:text-blue-600 transform hover:-translate-y-8 lg:hover:translate-y-0 lg:hover:translate-x-8 duration-300  hover:shadow-xl bg-gray-500">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"  class="w-6 h-6">
+           <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+         </svg>
+        </div>
+      </a>
+      <a routerLink="/public/dashbord/payement">
+        <div class="flex justify-center items-center w-14 h-14 text-white opacity-50 rounded-xl hover:bg-white hover:opacity-100 hover:text-blue-600 transform hover:-translate-y-8 lg:hover:translate-y-0 lg:hover:translate-x-8 duration-300  hover:shadow-xl bg-gray-500">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
+            <path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
+          </svg>
+        </div>
+       </a>
+       <a routerLink="/public/dashbord/tickets">
+        <div class="flex justify-center items-center w-14 h-14 text-white opacity-50 rounded-xl hover:bg-white hover:opacity-100 hover:text-blue-600 transform hover:-translate-y-8 lg:hover:translate-y-0 lg:hover:translate-x-8 duration-300  hover:shadow-xl bg-gray-500">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
+            <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
+          </svg>
+        </div>
+       </a>
+       <a (click)="logOut()" >
+        <div class="flex justify-center items-center w-14 h-14 text-white opacity-50 rounded-xl hover:bg-white hover:opacity-100 hover:text-blue-600 transform hover:-translate-y-8 lg:hover:translate-y-0 lg:hover:translate-x-8 duration-300  hover:shadow-xl bg-gray-500">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          </svg>
+        </div>
+       </a>
+       
+
+    </div>
+  </div> 
+</div>
+<div class="w-full lg:ml-24 "> 
+       
+  <button
+  class="but" (click)="onOpenModal()">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z" />
+  </svg>
+</button>
+        <router-outlet></router-outlet>
+       
+   </div>
+   <!--************************  MODAL ****************************-->
+<div class="mymodal" id="modal" >
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <button type="button" class="close" (click)="onCloseModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div style="border-radius: 100%; position: absolute; top: -50px; left: 11px; display: inline-block; padding: 16px;font-size: 18px;color: white; background-color: #17a2b8; ">8DH</div>
+        <div class="form-title text-center">
+          <h4>Générer E-tickets</h4>
+          
+        </div>
+        <div class="d-flex flex-column text-center">
+          <form>
+            <div class="form-group">
+              <input [(ngModel)]="generateTicketRequest.nombre" [ngModelOptions]="{standalone: true}" type="text" class="form-control" id="nombre"placeholder="Nombre De Tickets...">
+            </div>
+            <div class="form-group">
+              <select [(ngModel)]="generateTicketRequest.ligne" [ngModelOptions]="{standalone: true}" class="form-control">
+                <option *ngFor="let l of lignes" [value]="l.value">{{l.name}}</option>
+              </select>
+            </div>
+            <button (click)="generateTicket()" type="button" class="btn btn-info btn-block btn-round"  >Génerer</button>
+          </form>
+  </div>
+</div>
+</div>
+</div>
+</div>
+   </div>
+   
+  
+  

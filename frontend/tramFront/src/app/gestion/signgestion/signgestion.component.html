@@ -1,0 +1,12 @@
+<div class="mycontainer">
+  <div class="form-container">
+    <img src="../../../favicon.png">
+    <h3>Login</h3>
+    <div *ngIf="mode==1" class="alert alert-danger" role="alert">Nom d'utilisateur ou mot de passe invalide !</div>
+    <form>
+      <input type="text" placeholder="Email Adress" class="form-control" [(ngModel)]="loginRequest.gmail" [ngModelOptions]="{standalone: true}">
+      <input type="password" placeholder="password" class="form-control" [(ngModel)]="loginRequest.password" [ngModelOptions]="{standalone: true}">
+      <button class="btn btn-primary" (click)="login()">Sign In</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+<div class="mycontainer">
+    <div *ngIf="voyageurs.length != 0 && !isLoading">
+        <h3>La Liste Des Voyageures</h3>
+        <br>
+       
+      <table class="min-w-full leading-normal">
+        <thead>
+            <tr >
+                <th
+                    class="px-5 py-3 border-b-2 border-black-200 bg-green-600 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                    Nom
+                </th>
+                <th
+                    class="px-5 py-3 border-b-2 border-gray-200 bg-green-500 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                    Prénom
+                </th>
+                <th
+                    class="px-5 py-3 border-b-2 border-gray-200 bg-green-400 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                    Gmail
+                </th>
+                <th
+                    class="px-5 py-3 border-b-2 border-gray-200 bg-green-300 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                    Sexe
+                </th>
+                <th
+                    class="px-5 py-3 border-b-2 border-gray-200 bg-green-200 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                    Phone
+                </th>
+                <th
+                    class="px-5 py-3 border-b-2 border-gray-200 bg-green-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
+                    CIN
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let voyageur of voyageurs | paginate:config">
+                <td class="px-5 py-3 border-gray-200 bg-white text-sm">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 w-10 h-10">
+                            <img class="w-full h-full rounded-full"
+                                src="../../../../assets/images/{{voyageur.nom}}.jpg"
+                                alt="" />
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-gray-900 whitespace-no-wrap">
+                              {{voyageur.nom}}
+                            </p>
+                        </div>
+                    </div>
+                </td>
+                <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm">
+                    <p class="text-gray-900 whitespace-no-wrap">{{voyageur.prenom}}</p>
+                </td>
+                <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm">
+                  <p class="text-gray-900 whitespace-no-wrap">{{voyageur.gmail}}</p>
+              </td>
+              <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm">
+                <p class="text-gray-900 whitespace-no-wrap">{{voyageur.sexe}}</p>
+            </td>
+                <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm">
+                    <p class="text-gray-900 whitespace-no-wrap">
+                      {{voyageur.phone}}
+                    </p>
+                </td>
+                <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm">
+                    <span
+                        class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                        <span aria-hidden
+                            class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
+                        <span class="relative">{{voyageur.cin}}</span>
+                    </span>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <div style="text-align: center;margin-top: 30px;">
+      <pagination-controls id="basicPaginate" (pageChange)="pageChanged($event)"></pagination-controls>
+    </div>
+        
+    </div>
+    <div *ngIf="voyageurs.length == 0 && !isLoading"  class="mycontainer">
+        <img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/v2/assets/empty.svg" >
+        <br><br>
+        <h5>No Results Found</h5>
+    </div>
+
+    <section class = "container" *ngIf="isLoading">
+      <div class = "spinner spin-1"></div>
+      <div class = "spinner spin-2"></div>
+      <div class = "spinner spin-3"></div>
+    </section>
+
+</div>

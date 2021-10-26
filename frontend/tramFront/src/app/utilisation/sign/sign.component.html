@@ -1,0 +1,46 @@
+<form action="" >
+    <div class="form_container">
+
+        <div class="general_info" id="general_info">
+
+            <h2>Informations générale</h2>
+            <label *ngIf="signError.cin" style="color: red;font-size: 14px;">{{signError.cin}}</label><br>
+            <input [(ngModel)]="signRequest.cin" [ngModelOptions]="{standalone: true}" type="text" name="cin" id="cin" placeholder="CIN" required>
+            
+            <label *ngIf="signError.nom" style="color: red;font-size: 14px;">{{signError.nom}}</label><br>
+            <input [(ngModel)]="signRequest.nom" [ngModelOptions]="{standalone: true}" type="text" name="nom" id="nom" placeholder="Nom" required><br>
+            <label *ngIf="signError.prenom" style="color: red;font-size: 14px;">{{signError.prenom}}</label><br>
+            <input [(ngModel)]="signRequest.prenom" [ngModelOptions]="{standalone: true}" type="text" name="prenom" id="prenom" placeholder="Prénom" required><br>
+            <label *ngIf="signError.phone" style="color: red;font-size: 14px;">{{signError.phone}}</label><br>
+            <input [(ngModel)]="signRequest.phone" [ngModelOptions]="{standalone: true}" type="text" name="tele" id="tele" placeholder="numéro de téléphone" required><br>
+            
+
+            <input type="date" name="birthdate" id="birthdate" placeholder="Birthdate" ><br>
+            <label *ngIf="signError.sexe" style="color: red;font-size: 14px;">{{signError.sexe}}</label><br>
+            <label for="male">Homme</label> <input [(ngModel)]="signRequest.sexe" type="radio" name="sex" id="male" value="male">
+            <label for="female" id="labelf">Femme</label> <input [(ngModel)]="signRequest.sexe" type="radio" name="sex" id="female" value="female"><br>
+
+            
+
+            <br>
+
+        </div>
+
+        <div class="signup_info" id="signup_info">
+            
+            <h2>Informations d'inscription</h2>
+            <label *ngIf="signError.gmail" style="color: black;font-size: 14px;">{{signError.gmail}}</label><br>
+            <input [(ngModel)]="signRequest.gmail" [ngModelOptions]="{standalone: true}" type="email" name="email" id="email" placeholder="Email" required><br>
+            <label *ngIf="signError.password" style="color: black;font-size: 14px;">{{signError.password}}</label><br>
+            <input [(ngModel)]="signRequest.password" [ngModelOptions]="{standalone: true}" type="password" name="password" id="password" placeholder="Password" required><br>
+            
+            <input  type="password" name="password_confirmation" id="password_confirmation" placeholder="Password Confirmation" required><br>
+
+            <input  type="checkbox" name="accept" id="accept" required><label for="accept">J'accepte les termes et les conditions du site Web.</label>
+
+            <input type="submit" value="S'inscrire" id="signup_btn" (click)="onSignUp()">
+
+        </div>
+
+    </div>
+</form>
